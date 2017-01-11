@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+  <html>
+  
+    <head>
+	  <title>Food Map</title>
+		<meta name="viewport" content="initial-scale=1.0">
+		<meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 60%;
+      }
+    </style>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		  
+		<nav>
+		<div class="nav-wrapper">
+		  <div class="col s12">
+			<a href="#!" class="breadcrumb">東京</a>
+			<a href="#!" class="breadcrumb">和服體驗</a>
+		  </div>
+		</div>
+		</nav>
+		<span style="color:orange;"><big><big><p>各種和服款式都清楚了嗎？<br></br>每家店所推出的方案不同，先了解款式是很重要的功課喔！</p></big></big></span>
+  <form action="#">
+    <p>
+      <input name="group1" type="radio" id="test1" />
+      <label for="test1">和服(わふく)</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test2" />
+      <label for="test2">浴衣(ゆかた)</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="test3"  />
+      <label for="test3">袴(はかま)</label>
+    </p>
+    <p>
+        <input name="group1" type="radio" id="test4" />
+        <label for="test4">振袖(ふりそで)</label>
+    </p>
+  </form> 
+		
+			
+			
+		<button class="btn waves-effect waves-light" type="submit" name="action" onclick="javascript:c()">Submit
+			<i class="material-icons right">send</i>
+		</button>
+		
+		
+		<div class="row" style="display:none" id="A">
+        <div class="col s12 m7">
+          <div class="card">
+            
+			<div class="card-image"  id="CI">
+              <img src="http://i0.wp.com/cdn.kikinote.com/wp-content/uploads/2016/03/jp%E4%BA%AC%E9%83%BD7%E9%96%93%E5%92%8C%E6%9C%8D%E9%AB%94%E9%A9%97.jpg?resize=650%2C350">
+              <span class="card-title">圖片</span>
+            </div>
+            
+			<div class="card-content"  id="Ccontext">
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            
+			<div class="card-action" id="Cherf">
+              <a href="#">This is a link</a>
+            </div>
+          
+		  </div>
+        </div>
+      </div>
+		
+			
+			
+			
+			
+			
+			
+	<script> 
+	function c(){	
+		var a = document.getElementById("test1").checked; //服飾種類 //和服
+		var b = document.getElementById("test2").checked;            //浴衣
+		var c = document.getElementById("test3").checked;            //袴
+		var d = document.getElementById("test4").checked;            //振袖
+		
+		document.getElementById("A").style.display = "block"; 
+
+		
+		if(a)
+		{
+			document.getElementById("CI").innerHTML ="<img src='http://dycj73xya60xf.cloudfront.net/2015/12/rental2032.jpg'><span class='card-title'>和服</span>"
+			document.getElementById("Ccontext").innerHTML = "<p>和服（日语：わふく）是日本對其本土衣裝的稱呼。</p>"
+			document.getElementById("Cherf").innerHTML ="<a href = 'http://syouzi.pixnet.net/blog/post/367487198-%E3%80%8A%E8%AA%8D%E8%AD%98%E6%97%A5%E6%9C%AC%E3%80%8B%E5%82%B3%E7%B5%B1%E6%9C%8D%E9%A3%BE-%E5%92%8C%E6%9C%8D' >【和服】日本和服種類簡介</a>"
+		}
+		else if(b)
+		{
+			document.getElementById("CI").innerHTML ="<img src='http://i1.w.hjfile.cn/doc/201208/a8878d22795d4a57a50c3c858c5e50c5.jpg'><span class='card-title'>浴衣</span>"
+			document.getElementById("Ccontext").innerHTML = "<p>在浴衣的裡面，不需要加穿襦袢，是適合夏季穿著的輕便日本傳統服飾，通常材質較輕薄。</p>"
+			document.getElementById("Cherf").innerHTML ="<a href = 'http://syouzi.pixnet.net/blog/post/367487198-%E3%80%8A%E8%AA%8D%E8%AD%98%E6%97%A5%E6%9C%AC%E3%80%8B%E5%82%B3%E7%B5%B1%E6%9C%8D%E9%A3%BE-%E5%92%8C%E6%9C%8D' >【和服】日本和服種類簡介</a>"
+		}
+		else if(c)
+		{
+			document.getElementById("CI").innerHTML ="<img src='https://pic.pimg.tw/whereugo888/1440825255-3409422798_n.png'><span class='card-title'>袴</span>"
+			document.getElementById("Ccontext").innerHTML = "<p>又稱褶裙，常出現於畢業典禮的傳統學生服，於穿著和服或振袖後下著再加一件。</p>"
+			document.getElementById("Cherf").innerHTML ="<a href = 'http://syouzi.pixnet.net/blog/post/367487198-%E3%80%8A%E8%AA%8D%E8%AD%98%E6%97%A5%E6%9C%AC%E3%80%8B%E5%82%B3%E7%B5%B1%E6%9C%8D%E9%A3%BE-%E5%92%8C%E6%9C%8D' >【和服】日本和服種類簡介</a>"
+		}			
+		else
+		{
+			document.getElementById("CI").innerHTML ="<img src='http://www.kimono-oumi.com/images/2014_sashikae/2014030L.jpg'><span class='card-title'>標準</span>"
+			document.getElementById("Ccontext").innerHTML = "<p>較正式長袖和服，未婚女性於成人式、婚礼場合所穿著的正式服裝，通常花色較為華麗。</p>"
+			document.getElementById("Cherf").innerHTML ="<a href = 'http://syouzi.pixnet.net/blog/post/367487198-%E3%80%8A%E8%AA%8D%E8%AD%98%E6%97%A5%E6%9C%AC%E3%80%8B%E5%82%B3%E7%B5%B1%E6%9C%8D%E9%A3%BE-%E5%92%8C%E6%9C%8D' >【和服】日本和服種類簡介</a>"
+		}
+    }
+  </script> 
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	<script>
+	function f()
+	{   
+	   
+		var list =[
+          {"ig":"http://a1.bbkz.net/forum/attachment.php?attachmentid=1374989&thumb=1&d=1417513767",  "tl":"【岡本著物】" ,       "ct":"款式多、距離清水寺近、熱門",                          "lk":"http://www.okamoto-kimono.com/tw/index.html"},
+          {"ig":"http://farm8.staticflickr.com/7056/8687244457_51c65e1ba8.jpg",                       "tl":"【染匠きたむら】" ,   "ct":"質料比較好且花色較典雅",                              "lk":"http://www.sensho-kitamura.jp/info/chinese.html"},
+          {"ig":"http://img.imjanet.com/pixnet/1faa54b587d183f717e83b54dd6d687e.jpg",                 "tl":"【夢館】" ,           "ct":"有詳細的中文介面與台灣服務人員，款式多到會眼花撩亂",  "lk":"http://www.tw-kyoto.yumeyakata.com/"},
+		  {"ig":"https://farm1.staticflickr.com/559/18108567284_1c4ff7bc94_z.jpg",                    "tl":"【夢京都】" ,         "ct":"年輕一點的和服款式、有中文專頁網站、搭配多",          "lk":"http://www.yumekyoto-kimono.com/"},
+		  {"ig":"https://pic.pimg.tw/lisa0205/1444248412-83640553_l.jpg?v=1444248946",                "tl":"【てくてく京都】" ,   "ct":"講究和服穿起來的質感與款式",                          "lk":"http://tekutekukyoto.com/gallery/"},
+		  {"ig":"http://shop-list.wargo.jp/wp-content/uploads/2013/11/shinkyogoku.jpg",               "tl":"【京都Wargo】" ,      "ct":"時尚行的象徵、價格最實惠、髮型設計只要900日圓起！",   "lk":"https://kyotokimono-rental.com/tw/"}
+        ];
+		var str = "";
+		var i;
+		for(i=0;i<list.length;i++)
+        { 
+			str += '<li class="collection-item avatar">';
+			str += '<img src="'+ list[i].ig +'" alt="" class="circle">';
+			str += '<span class="title">' + list[i].tl + '</span>';
+			str += '<p>' + list[i].ct + '</p>';
+			str += '<a href="' + list[i].lk + '" class="secondary-content"><i class="material-icons">grade</i></a>';
+			str += '</li>';
+		}		
+		document.getElementById("demo").innerHTML = str;
+	}
+	</script>
+	
+    <body onload="f()">	 
+	<br></br><br></br><br></br><br></br>
+    <p>小編也有去過阪神京地區，運氣很好的有遇上滿開的櫻花季，畫面讓人永身難忘，<br></br>但很遺憾的當時沒有租借和服拍照留下紀念，所以決定下次去一定要穿和服走在京都的街道上！<br></br><span style="color:blue;">而且日本櫻花季也要到了呢，想不想在日本最美的季節留下最美的回憶呢？</span><br></br><span style="color:red;">在此小編比較後整理了6間適合台灣人租借和服的店家</span>，<br></br><big><big>就算不懂日語也OK，女孩們趕快收藏起來，快預約準備GO嘍～！！</big></big></p>
+	  <div id="map"></div>
+	  
+	  <ul class="collection" id="demo">
+	  </ul>
+	  
+	  
+	  
+	  
+    <script>
+        
+		var map1;
+		function initMap() {
+		  map1 = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: 34.997384, lng: 135.7702763},
+			zoom: 14
+		  });
+		  
+		  var marker1 = new google.maps.Marker({
+			position: {lat: 34.9948033, lng: 135.7824928},
+			map: map1,
+			title: '【岡本著物】'
+		  });
+		  
+		  var marker2 = new google.maps.Marker({
+			position: {lat: 34.9973254, lng: 135.7791288},
+			map: map1,
+			title: '【染匠きたむら】'
+		  });
+		  
+		  var marker3 = new google.maps.Marker({
+			position: {lat: 34.9960366, lng: 135.7616692},
+			map: map1,
+			title: '【夢館】'
+		  });
+		  
+		  var marker4 = new google.maps.Marker({
+			position: {lat: 34.997968, lng: 135.7650355},
+			map: map1,
+			title: '【夢京都】'
+		  });
+		  
+		  var marker5 = new google.maps.Marker({
+			position: {lat: 34.9979002, lng: 135.7343939},
+			map: map1,
+			title: '【てくてく京都】'
+		  });
+	
+	      var marker6 = new google.maps.Marker({
+			position: {lat: 34.998419, lng: 135.7674167},
+			map: map1,
+			title: '【京都Wargo】'
+		  });
+		  
+		}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	<br></br><br></br>
+		 
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/Ngmh1Rq0fGI" frameborder="0" allowfullscreen></iframe>
+		 
+ <footer class="page-footer">
+        
+          <div class="footer-copyright">
+            <div class="container">
+            2017 Pamela written
+            </div>
+          </div>
+        </footer>
+    </body>
+	
+	
+	
+	
+  </html>
